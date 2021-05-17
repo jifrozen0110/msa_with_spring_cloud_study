@@ -19,6 +19,12 @@ spring:
         git:
           uri: https://github.com/jifrozen0110/spring-cloud-config
 #          uri: file:///Users/jifrozen/project/git-local-repo
+encrypt:
+  #  key: abcdefghijklmnopqrstuvwxyz0123456789
+  key-store:
+    location: file://${user.home}/project/keystore/apiEncryptionKey.jks
+    password: 1q2w3e4r
+    alias: apiEncryptionKey
 management:
   endpoints:
     web:
